@@ -1,0 +1,16 @@
+.homePage {
+    position: relative;
+    margin: 0px;
+    height: 100vh;
+    padding: 0px;
+    background: url('/public/imgs/backgroundHome.jpg') no-repeat center center/cover;
+
+  };
+.textHome{
+    background-color: red;
+    border: 2px solid black;
+    text-align: none;
+    padding: -60px ;
+
+}
+/* Adapt the position of textHome left + buttun */
