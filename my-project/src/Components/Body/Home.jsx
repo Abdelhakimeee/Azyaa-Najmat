@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link,  } from 'react-router-dom';
 import './Home.css';
 
 function Home() {
@@ -7,7 +8,7 @@ function Home() {
       <div className='textHome'>
         <h1>أزياء النجمات</h1>
         <h3>كوني نجمة من نجومنا</h3>
-        <a href="#" class="cta-button">تسوق الآن</a>
+        <button><Link to='shop'>تسوق الآن</Link></button>
       </div>
       
     </div>

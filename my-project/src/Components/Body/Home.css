@@ -1,16 +1,28 @@
 .homePage {
-    position: relative;
-    margin: 0px;
-    height: 100vh;
-    padding: 0px;
-    background: url('/public/imgs/backgroundHome.jpg') no-repeat center center/cover;
+  /* The image of background */
+  background: url('/public/imgs/backgroundHome.jpg') no-repeat center center/cover;
+  position: relative;
+  height: 100vh;
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center; 
+}
 
-  };
-.textHome{
-    background-color: red;
-    border: 2px solid black;
-    text-align: none;
-    padding: -60px ;
+.textHome {
+  /* text-align: left;  */
+  margin-left: 160px;
+  margin-top: -190px;
+  color: rgb(41, 98, 110);
+}
+.textHome h3 {
+  margin-top: 15px ;
+  margin-bottom: 50px;
+}
+.textHome button{
+  background-color: #ffd202;
+  border: none;
+  border-radius: 5px;
+  padding:10px 50px;
 
 }
-/* Adapt the position of textHome left + buttun */
+
