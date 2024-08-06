@@ -1,0 +1,32 @@
+.shop-page{
+    border-top: 2px solid rgb(15, 58, 68);;
+    background-color: #ffd202;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding-top:60px;
+    width: 100vw;
+
+}
+.card-shop{
+    background-color: rgb(15, 58, 68);
+    color:#ffd202;
+    border-radius: 6px;
+    margin: 10px;
+    width: calc(100% -40px);
+    max-width: 250px;
+}
+.card-shop img{
+    border-radius: 6px;
+    margin: 3%;
+    width: 94%;
+}
+.card-shop span{
+    margin: 10px;
+}
+.card-shop h4 {
+    margin: 10px;
+}
+.card-shop p {
+    margin:0 5px 20px 5px;
+}

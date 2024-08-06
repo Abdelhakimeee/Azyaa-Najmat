@@ -36,7 +36,9 @@ function Navbar() {
       <div >
         <ul className='bar-pages'>
           <li><Link to='/review'>مراجعة العملاء</Link></li> 
-          <li><Link to='/contactUs'>تواصل معنا</Link></li>
+          <li><a href='https://api.whatsapp.com/send?phone=212772326384' target='_blank'>
+            تواصل معنا
+          </a></li>
           <li><Link to='/shop'>المتجر</Link></li>
           <li><Link to='/'>الصفحة الرئيسية</Link></li>         
         </ul> 

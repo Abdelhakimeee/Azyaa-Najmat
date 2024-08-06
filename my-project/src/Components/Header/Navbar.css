@@ -1,11 +1,15 @@
 
+/* $ make the nav space between  call  image Logo  and icons : % to evit @quiry 
+- ...
+-
+-
+ */
 
 .nav a {
     text-decoration: none;
 }
 .bar-logos {
     background-color: rgb(15, 58, 68);
-
     display: flex;
     justify-content: center;
     padding: 10px 0px;
