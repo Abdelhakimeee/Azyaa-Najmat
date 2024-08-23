@@ -32,7 +32,7 @@
 }
 .textHome button:hover{
   transform: scale(1.05);
-  background-color: #ddc456;
+  background-color: #ffd000;
 }
 
  /* ___2 */
@@ -46,6 +46,7 @@
   background-color: #ffd202;
   color:rgb(15, 58, 68);
   margin: 0px;
+  padding-bottom: 30px;
   display: flex;
   justify-content: space-around;
 }
@@ -64,4 +65,19 @@
   font-weight: 600;
 }
 
+/* @quoiry  */
+@media (max-width: 600px) {
+  .textHome button{
+    padding: 10px 20px;
+    font-size: 15px;
+    font-weight: 600;
+  }
+  .textHome {
+    font-size: 15px;
+  }
+  .home-2{
+    display: block;
 
+  }
+
+}

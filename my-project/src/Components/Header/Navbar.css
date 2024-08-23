@@ -1,21 +1,14 @@
-
-/* $ make the nav space between  call  image Logo  and icons : % to evit @quiry 
-- ...
--
--
- */
-
 .nav a {
     text-decoration: none;
+    color: inherit;   
 }
 .bar-logos {
     background-color: rgb(15, 58, 68);
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     padding: 10px 0px;
     color: #ffd202;
-
-
+    padding-right: 60px;
 }
 
 .call-us {
@@ -23,6 +16,7 @@
     padding-top: 20px;
     font-size: 17px;
     color: #ffd202;
+    
 
 }
 .call-us .ico {
@@ -41,26 +35,26 @@
 .logoPage {
     height: 90px;
     border-radius: 10px;
-    margin: 0px 380px 0px 320px ;   
 }
 .call-2 .ico-2 {
     padding-top: 30px;
     margin-right: 20px;
+    font-size: 20px;
 }
 
 /* Second */
 .bar-pages {
   
     margin: 0px;
-    padding: 10px 180px;
+    padding: 10px ;
     background-color: #ffd202;
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 .bar-pages li {
     list-style-type: none;
-    margin: 0px 60px;
+    /* margin: 0px 60px; */
     font-size: large;
     font-weight: 700;
 }
@@ -69,3 +63,47 @@
     color: rgb(41, 98, 110);
 
 }
+/*  @media  */
+@media (max-width: 600px) {
+
+    .bar-logos {
+        display: flex;
+        justify-content: space-evenly;
+        padding: 10px 0px;
+        
+    }
+    
+    .call-us {
+        font-size: 10px;
+    }
+    .call-us .ico {
+        font-size: x-small;
+    }
+    .bar-logos .logoPage{
+        height: 50px;
+    }
+    .call-2 .ico-2 {
+        padding-top: 20px;
+        margin-right: 5px;
+        font-size: 10px;
+    }.call-us p {
+        padding: 0px  5px;
+    }
+    /* ___________________________ */
+    .bar-pages {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+      }
+    .bar-pages li {
+      margin: 10px 0;
+      width: 100%;
+      text-align: center;
+    }
+  
+    .bar-pages li a {
+      width: 100%;
+      display: block;
+    }
+  }

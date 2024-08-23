@@ -17,12 +17,18 @@ function Footer() {
       </div>
       
       <div className='socialMedia'>
-        <a href=""><FontAwesomeIcon className='icons' icon={faLocationDot} />Adress for stor X</a>
-        <a href=""><FontAwesomeIcon className='icons' icon={faWhatsapp} />0772326384</a>
-        <a href=""><FontAwesomeIcon className='icons' icon={faPhoneVolume} />0772326384</a>
-        <a href=""><FontAwesomeIcon className='icons' icon={faFacebook} />أزياء النجمات</a>
-        <a href=""><FontAwesomeIcon className='icons' icon={faInstagram} />أزياء النجمات</a>
-        <a href=""><FontAwesomeIcon className='icons' icon={faTelegram} />أزياء النجمات + add the "Scan QR code" </a>
+        <div >
+          <a href=""><FontAwesomeIcon className='icons' icon={faWhatsapp} />0772326384</a>
+          <a href=""><FontAwesomeIcon className='icons' icon={faPhoneVolume} />0772326384</a>
+          <a href=""><FontAwesomeIcon className='icons' icon={faLocationDot} />Adress for stor X</a>
+        </div>
+        
+        <div>
+          <a href=""><FontAwesomeIcon className='icons' icon={faFacebook} />أزياء النجمات</a>
+          <a href=""><FontAwesomeIcon className='icons' icon={faInstagram} />أزياء النجمات</a>
+          <a href=""><FontAwesomeIcon className='icons' icon={faTelegram} />أزياء النجمات + add the "Scan QR code" </a>
+        </div>
+       
     
       </div>
       

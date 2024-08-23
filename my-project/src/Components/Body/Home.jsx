@@ -18,17 +18,17 @@ function Home() {
         <h2 className='title-home-2'>لأنك تستحقين الأفضل</h2>
     <div className='home-2'>
         
-        <div class="info-section">
+        <div className="info-section">
           <p>الضمان</p>
           <span>جودة مضمونة واسترجاع فوري</span>
         </div>
 
-        <div class="info-section">
+        <div className="info-section">
           <p>التوصيل</p>
           <span>توصيل آمن وسريع إلى منزلك</span>
         </div>
 
-        <div class="info-section">
+        <div className="info-section">
           <p>الثقة</p>
           <span>المنتوج يصلك كما في الصورة</span>
         </div>

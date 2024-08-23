@@ -1,124 +1,74 @@
-import React from 'react';
-import './Shop.css';
+import React,{useEffect, useState} from 'react'
+import { useNavigate } from 'react-router-dom';
+import './Shop.css'
+
 
 function Shop() {
+  const [products, setProducts]= useState([]);
+  const navigate = useNavigate();
+  
+
+  useEffect(()=>{
+    getProducts();
+},[]);
+
+  const getProducts = async()=>{
+        try {
+            let result = await fetch('http://localhost:5300/products');
+            result = await result.json();
+            result.sort((a,b)=> b._id.localeCompare(a._id));
+            setProducts(result);
+        }catch (error){
+            console.error('Error fetching product:',error);
+        }   
+    }
+
+    const searchHandle = async(event)=>{
+      let key = event.target.value;
+      if (key){
+          try {
+              
+          let result = await fetch(`http://localhost:5300/search/${key}`);
+          result = await result.json()
+          if(result){
+              setProducts(result)
+          }
+          }catch (error){
+              console.error("Error searching products:",error);
+          }
+      }else {getProducts()}
+  }
+
+
   return (
     <div className='shop-page'>
+      <input className='search' type='text' placeholder='   Search Product'
+      onChange={searchHandle} 
+      />
 
-      <ul className='card-shop' >
-        <img src='/imgs/photo_2024-08-06_18-23-43.jpg'></img>
-        <h3>200<span>درهم</span></h3>
-        <h4>قفطان </h4>
-        <p>جلابة دجين جودةعالية</p>
-      </ul>
+    <div className='card'>
+      {
+        products.map((item)=>
+          <ul key={item._id} className='one-card'>
+            <li><img src={`http://localhost:5300/${item.img}`} alt='Product Photo ' /></li>
+            <li className='card-price'>{item.price}</li>
+            <li className='card-name'>{item.name}</li>
+            <li className='card-text'>{item.text}</li>
+            
+            <button className='cardButton' onClick={()=> navigate('/formShop/'+item._id)} >Shop new</button>
 
-      {/* the fack map to show all products you have  to creat dataBases  datatata
-      #  from /ProductList.jsx
 
-      Example :
-              { products.length > 0 ?
-           products.map((item,index)=>
-            <ul key={item._id}>
-                <li>{index+1}</li>
-                <li>{item.name}</li>
-                <li>{item.price}</li>
-                <li>{item.category}</li>
-                <li>{item.company}</li>
-                <li>
-                    <button onClick={()=>deleteProduct(item._id)}>Delete</button>
-                    <Link to={"/update/"+item._id}>Update</Link>
-                </li>
-            </ul>
-      */}
-
-      <ul className='card-shop' >
-        <img src='/imgs/photo_2024-08-06_18-23-43.jpg'></img>
-        <h3>400<span>درهم</span></h3>
-        <h4>قفطان </h4>
-        <p>جلابة دجين جودةعالية</p>
-      </ul>
-      <ul className='card-shop' >
-        <img src='/imgs/photo_2024-08-06_18-23-43.jpg'></img>
-        <h3>400<span>درهم</span></h3>
-        <h4>قفطان </h4>
-        <p>جلابة دجين جودةعالية</p>
-      </ul>
-      <ul className='card-shop' >
-        <img src='/imgs/photo_2024-08-06_18-23-43.jpg'></img>
-        <h3>400<span>درهم</span></h3>
-        <h4>قفطان </h4>
-        <p>جلابة دجين جودةعالية</p>
-      </ul>
-      <ul className='card-shop' >
-        <img src='/imgs/photo_2024-08-06_18-23-43.jpg'></img>
-        <h3>400<span>درهم</span></h3>
-        <h4>قفطان </h4>
-        <p>جلابة دجين جودةعالية</p>
-      </ul>
-      <ul className='card-shop' >
-        <img src='/imgs/photo_2024-08-06_18-23-43.jpg'></img>
-        <h3>400<span>درهم</span></h3>
-        <h4>قفطان </h4>
-        <p>جلابة دجين جودةعالية</p>
-      </ul>
-      <ul className='card-shop' >
-        <img src='/imgs/photo_2024-08-06_18-23-43.jpg'></img>
-        <h3>400<span>درهم</span></h3>
-        <h4>قفطان </h4>
-        <p>جلابة دجين جودةعالية</p>
-      </ul>
-      <ul className='card-shop' >
-        <img src='/imgs/photo_2024-08-06_18-23-43.jpg'></img>
-        <h3>400<span>درهم</span></h3>
-        <h4>قفطان </h4>
-        <p>جلابة دجين جودةعالية</p>
-      </ul>
-      <ul className='card-shop' >
-        <img src='/imgs/photo_2024-08-06_18-23-43.jpg'></img>
-        <h3>400<span>درهم</span></h3>
-        <h4>قفطان </h4>
-        <p>جلابة دجين جودةعالية</p>
-      </ul>
-      <ul className='card-shop' >
-        <img src='/imgs/photo_2024-08-06_18-23-43.jpg'></img>
-        <h3>400<span>درهم</span></h3>
-        <h4>قفطان </h4>
-        <p>جلابة دجين جودةعالية</p>
-      </ul>
-      <ul className='card-shop' >
-        <img src='/imgs/photo_2024-08-06_18-23-43.jpg'></img>
-        <h3>400<span>درهم</span></h3>
-        <h4>قفطان </h4>
-        <p>جلابة دجين جودةعالية</p>
-      </ul>
-      <ul className='card-shop' >
-        <img src='/imgs/photo_2024-08-06_18-23-43.jpg'></img>
-        <h3>400<span>درهم</span></h3>
-        <h4>قفطان </h4>
-        <p>جلابة دجين جودةعالية</p>
-      </ul>
-      <ul className='card-shop' >
-        <img src='/imgs/photo_2024-08-06_18-23-43.jpg'></img>
-        <h3>400<span>درهم</span></h3>
-        <h4>قفطان </h4>
-        <p>جلابة دجين جودةعالية</p>
-      </ul>
-      <ul className='card-shop' >
-        <img src='/imgs/photo_2024-08-06_18-23-43.jpg'></img>
-        <h3>400<span>درهم</span></h3>
-        <h4>قفطان </h4>
-        <p>جلابة دجين جودةعالية</p>
-      </ul>
-      <ul className='card-shop' >
-        <img src='/imgs/photo_2024-08-06_18-23-43.jpg'></img>
-        <h3>400<span>درهم</span></h3>
-        <h4>قفطان </h4>
-        <p>جلابة دجين جودةعالية</p>
-      </ul>
+          </ul>
+        )
+      }
+    </div>
 
 
     </div>
   )
 }
 
-export default Shop
+
+
+
+export default Shop;

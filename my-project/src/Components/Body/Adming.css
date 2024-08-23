@@ -1,0 +1,50 @@
+.AdmingPage{
+    border-top: 2px solid rgb(15, 68, 35);
+    background-color: #ffd202;
+    padding:40px  0px;
+}
+.AdmingPage .search{
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    margin:0px 20px 50px 0px;
+}
+.AdmingPage a{
+    text-decoration: none;
+    color: inherit;
+    background-color: rgb(15, 68, 35);  
+    color: #ffd202;
+    padding:  2px 5px 5px;
+    margin: 10px;
+    border-radius: 6px;
+}
+.oneCard button{
+    padding: 5px 5px 4px;
+    border-radius: 5px;
+    border: none;
+    color: red;
+    font-weight: 600;
+    margin-left: 20px;
+}
+
+.AdmingPage table{
+    border-collapse: collapse;
+    width: 90%;
+    margin: 0 auto ;
+    
+}
+.AdmingPage table th{
+    font-family: 'Gill Sans MT', Calibri, 'Trebuchet MS';
+    font-size: x-large;
+    color: red;
+    padding: 10px 0px;
+}
+.AdmingPage  td, th{
+    border: 3px solid rgb(15, 68, 35);
+    padding: 3px;
+    font-weight: 600;
+}
+.AdmingPage td img {
+    width: 200px;
+    border-radius: 6px;
+}

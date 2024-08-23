@@ -1,32 +1,64 @@
-.shop-page{
-    border-top: 2px solid rgb(15, 58, 68);;
+.shop-page {
+    border-top: 2px solid rgb(15, 68, 35);
     background-color: #ffd202;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    padding-top:60px;
-    width: 100vw;
+    margin: 0px;
+}
+.shop-page .search{
+    margin-top: 30px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
 
 }
-.card-shop{
+.card {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.one-card{
+    list-style-type: none;
     background-color: rgb(15, 58, 68);
-    color:#ffd202;
-    border-radius: 6px;
-    margin: 10px;
-    width: calc(100% -40px);
+    color: #ffd202;
     max-width: 250px;
-}
-.card-shop img{
+    width: 100vw;
+    margin: 30px;
     border-radius: 6px;
-    margin: 3%;
-    width: 94%;
+
 }
-.card-shop span{
+.one-card img{
+    margin-top: 5px;
+    width: 240px;
+    /* height: 350px; */
+    border-radius: 6px;
+
+    
+}
+.card-price {
+    color: rgb(255, 0, 0);
+    font-weight: 600;
+    font-size: x-large;
+}
+
+.card-text {
+    font-size: x-small;
+    margin: 5px 0px;
+}
+.cardButton{
+    background-color: #ffd202;
+    /* background-color: rgb(255, 0, 0); */
+    padding: 8px;
     margin: 10px;
+    color: red;
+    font-weight: 600;
+    font-size: large;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.4s ease, background-color 0.4s ease;
 }
-.card-shop h4 {
-    margin: 10px;
-}
-.card-shop p {
-    margin:0 5px 20px 5px;
+.cardButton:hover{
+    transform: scale(1.2);
+    background-color: #b69f38; 
+
+    
 }

@@ -6,3 +6,28 @@
   text-align: center;
   margin: 0px;
 } 
+.icon-WhantsApp {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: #25D366;
+  padding: 0px 8px;
+  border-radius: 8px;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: background-color 0.7s ease, border-radius 0.7s ease;
+
+}
+.icon-WhantsApp a {
+  color: #fff; 
+  font-size: 35px; 
+  text-decoration: none; 
+}
+.icon-WhantsApp:hover {
+  background-color: #0a702d;
+  border-radius: 50%;
+}
+
+
+
+

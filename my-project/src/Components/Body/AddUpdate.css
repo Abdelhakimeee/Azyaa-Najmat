@@ -1,0 +1,56 @@
+.box{
+    display: flex;    
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #e7e7d7;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+
+
+}
+.title{
+    font-size: 24px;
+    margin: 20px 0;
+    color: rgb(41, 98, 110);
+
+}
+.inputBox {
+    width: 100%;
+    max-width: 400px;
+    color: rgb(41, 98, 110);
+    padding: 10px;
+    margin-bottom: 15px;
+    font-weight: 600;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+
+}
+.appButton {
+    width: 20%;
+    padding: 10px;
+    margin: 5px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffd202;
+    color: rgb(44, 116, 130);
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+.appButton:hover {
+    background-color: #5d4d04;
+}
+.invalid-input{
+    color: red;
+    font-weight: 600;
+}
+/* FormShopNew  */
+.info-invalid{
+    color: red;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
