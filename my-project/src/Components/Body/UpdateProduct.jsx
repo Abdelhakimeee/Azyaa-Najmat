@@ -18,7 +18,7 @@ const UpdateProduct= ()=>{
 
     const getProductDetails = async()=>{
         try {
-            let result = await fetch(`http://localhost:5300/product/${params.id}`);
+            let result = await fetch(`https://azyaa-najmat.onrender.com/product/${params.id}`);
             result = await result.json();
             setImg(result.img);
             setPrice(result.price);
@@ -30,7 +30,7 @@ const UpdateProduct= ()=>{
 
     }
     const Update = async()=>{
-        let result = await fetch(`http://localhost:5300/product/${params.id}`,{
+        let result = await fetch(`https://azyaa-najmat.onrender.com/product/${params.id}`,{
             method: 'PUT',
             body:JSON.stringify({img, price, name, text}), 
             headers:{

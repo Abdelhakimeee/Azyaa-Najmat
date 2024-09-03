@@ -14,7 +14,7 @@ function Shop() {
 
   const getProducts = async()=>{
         try {
-            let result = await fetch('http://localhost:5300/products');
+            let result = await fetch('https://azyaa-najmat.onrender.com/products');
             result = await result.json();
             result.sort((a,b)=> b._id.localeCompare(a._id));
             setProducts(result);
@@ -28,7 +28,7 @@ function Shop() {
       if (key){
           try {
               
-          let result = await fetch(`http://localhost:5300/search/${key}`);
+          let result = await fetch(`https://azyaa-najmat.onrender.com/search/${key}`);
           result = await result.json()
           if(result){
               setProducts(result)
@@ -50,7 +50,7 @@ function Shop() {
       {
         products.map((item)=>
           <ul key={item._id} className='one-card'>
-            <li><img src={`http://localhost:5300/${item.img}`} alt='Product Photo ' /></li>
+            <li><img src={`https://azyaa-najmat.onrender.com/${item.img}`} alt='Product Photo ' /></li>
             <li className='card-price'>{item.price}</li>
             <li className='card-name'>{item.name}</li>
             <li className='card-text'>{item.text}</li>
