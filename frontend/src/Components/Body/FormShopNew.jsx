@@ -27,7 +27,7 @@ const FormShopNew = ()=>{
 
     const getProductDetails = async()=>{
         try {
-            let result = await fetch(`https://azyaa-najmat.onrender.com/product/${params.id}`);
+            let result = await fetch(`http://localhost:5300/product/${params.id}`);
             result = await result.json();
 
             setImg(result.img);
@@ -52,7 +52,7 @@ const FormShopNew = ()=>{
         if (checkinfo()){
 
             const whatsappUrl =`https://api.whatsapp.com/send?phone=212772326384&text=${encodeURIComponent(
-                `Hello, I am interested in the following product:\n\nProductName: ${name}\nPrice: ${price}\nImage: ${`https://azyaa-najmat.onrender.com`}/${img}\nUserNAme: ${userName}\nPhone: ${phoneNumber}\ntaille: ${taille}\nAdress: ${adress}`
+                `Hello, I am interested in the following product:\n\nProductName: ${name}\nPrice: ${price}\nImage: ${`http://localhost:5300`}/${img}\nUserNAme: ${userName}\nPhone: ${phoneNumber}\ntaille: ${taille}\nAdress: ${adress}`
               )}`;
                   window.open(whatsappUrl, '_blank', 'nooper,noreferrer');
                   navigate('/shop')      

@@ -1,7 +1,13 @@
-const express = require('express')
-const router = express.Router()
-const jwt = require('jsonwebtoken')
-require('dotenv').config();
+import express from 'express';
+import jwt from 'jsonwebtoken';
+import dotenv from 'dotenv';
+
+dotenv.config();
+
+const router = express.Router()         
+
+
+
 
 const USER = {
     name: process.env.USER_NAME,
@@ -32,4 +38,4 @@ router.post('/login', (req, res)=>{
         res.status(401).json({message: 'اسم المستخدم أو كلمة المرور غير صحيحة'})
     }
 })
-module.exports = router;
+export default router;

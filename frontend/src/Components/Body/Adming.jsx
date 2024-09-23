@@ -11,7 +11,7 @@ function Adming() {
 
     const getProducts = async()=>{
         try {
-            let result = await fetch('https://azyaa-najmat.onrender.com/products');
+            let result = await fetch('http://localhost:5300/products');
             result = await result.json();
             result.sort((a,b)=> b._id.localeCompare(a._id));
             setProducts(result);
@@ -23,7 +23,7 @@ function Adming() {
 
     const deleteProduct = async (id)=>{
         try {
-            let result = await fetch(`https://azyaa-najmat.onrender.com/products/${id}`,{
+            let result = await fetch(`http://localhost:5300/products/${id}`,{
                 method:"Delete"
             });
             result = await result.json();
@@ -40,7 +40,7 @@ function Adming() {
         if (key){
             try {
                 
-            let result = await fetch(`https://azyaa-najmat.onrender.com/search/${key}`);
+            let result = await fetch(`http://localhost:5300/search/${key}`);
             result = await result.json()
             if(result){
                 setProducts(result)
@@ -75,11 +75,11 @@ function Adming() {
 
                 {/* {item.img && item.img.map((imgg, i)=>(     # add many photo for the same allonce ar pruduct #
                     <li key={i}>
-                        <img src={`https://azyaa-najmat.onrender.com/${imgg}`}   />
+                        <img src={`http://localhost:5300/${imgg}`}   />
                     </li>
                 ))} */}
                 
-                <td ><img src={`https://azyaa-najmat.onrender.com/${item.img}`} alt="Photo Add correct URL" /></td>
+                <td ><img src={`http://localhost:5300/${item.img}`} alt="Photo Add correct URL" /></td>
                 <td >{item.price}</td>
                 <td >{item.name}</td>
                 <td >{item.text}</td>

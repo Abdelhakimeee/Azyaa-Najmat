@@ -25,7 +25,7 @@ function AddProduct() {
 
     
 
-    let result = await fetch('https://azyaa-najmat.onrender.com/add-product',{
+    let result = await fetch('http://localhost:5300/add-product',{
         method:"POST",
         body: formData,
         // headers:{

@@ -1,4 +1,4 @@
-const mongoose = require('mongoose')
+import mongoose from "mongoose";
 
 const productSchema = new mongoose.Schema({
     // img: [String],     for many photo 
@@ -7,5 +7,4 @@ const productSchema = new mongoose.Schema({
     name: String,
     text: String,
 });
-
-module.exports = mongoose.model('products', productSchema);
+export default mongoose.model('products', productSchema);
