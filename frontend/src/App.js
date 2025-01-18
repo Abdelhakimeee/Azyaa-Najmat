@@ -1,12 +1,12 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Navbar from './Components/Header/Navbar';
+import Navbar from './Components/Navbar/Navbar';
 import Footer from './Components/Footer/Footer';
-import Home from './Components/Body/Home';
+import Home from './pages/Home';
 import Shop from './Components/Body/Shop';
-import Review from './Components/Body/Review';
-import Adming from './Components/Body/Adming';
+import Review from './pages/Review';
+import Adming from './pages/Adming';
 import AddProduct from './Components/Body/AddProduct';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
