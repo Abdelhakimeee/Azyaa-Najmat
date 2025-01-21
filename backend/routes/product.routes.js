@@ -1,5 +1,5 @@
 import express from 'express';
-import upload from '../controllers/uploadImgs.controller.js';
+import upload from '../services/uploadImgs.service.js';
 import authenticateToken from '../auth/auth.js';
 import { getProducts,getproduct,updateProduct,
 deleteProduct, addProduct, searchProduct
@@ -7,12 +7,13 @@ deleteProduct, addProduct, searchProduct
 
 const router = express.Router();
 
-router.get('/', getProducts);
-router.get('/:id', getproduct);
-router.put('/:id', authenticateToken, updateProduct)
-router.post('/', authenticateToken, upload.single('img'), addProduct)
-router.delete('/:id', authenticateToken, deleteProduct );
-router.get('/:key', searchProduct);
+router.get('/', getProducts); // god
+router.get('/:id', getproduct);// god 
+
+router.put('/:id', updateProduct)   // next with frontend
+router.post('/', upload.single('img'), addProduct) // next with frontend
+router.delete('/:id', deleteProduct );  // next with frontend
+router.get('/:key', searchProduct);  // next with frontend
 
 
 export default router;

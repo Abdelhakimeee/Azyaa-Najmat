@@ -1,8 +1,6 @@
 import multer from "multer";
 import path from 'path';
 
-
-
             // uploads  save the imge  using  " multer " 
 
     const storage = multer.diskStorage({
@@ -13,7 +11,6 @@ import path from 'path';
         cb(null, Date.now() + path.extname(file.originalname));    
                 }
     })
-    const upload = multer({storage: storage});
+const upload = multer({ storage: storage });
 
-    export default upload;
-
+export default upload;

@@ -19,17 +19,18 @@ app.use(cors())
 
 app.use('/auth',authenticateToken)
 app.use('/uploads', express.static('uploads'));    //   alone index use folder uploads  
-
 app.use('/api', uploadImgRoute);       //    NN_8  next to upload Imag using Multer
+
+
 app.use("/api/products", productRoute);
-app.use('/users', userRoutes);
+app.use('/api/users', userRoutes);
+// you have to add   ,  authenticateToken to block the access just the x have token have acccess
+// router.post('/', authenticateToken,  addProduct)
+
 //...
 
 
 app.listen(PORT, ()=>{
     console.log(`Back-end work sucessfully`)
 });
-// npm run dev       # to start the server 
-
-
-
+// npm run dev       # to start the server
