@@ -1,6 +1,5 @@
 import express from 'express';
 import upload from '../services/uploadImgs.service.js';
-import authenticateToken from '../auth/auth.js';
 import { getProducts,getproduct,updateProduct,
 deleteProduct, addProduct, searchProduct
  } from '../controllers/product.controller.js';

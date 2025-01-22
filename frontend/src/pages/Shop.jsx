@@ -1,6 +1,8 @@
 import React,{useEffect, useState} from 'react'
 import { useNavigate } from 'react-router-dom';
-import './Shop.css'
+import '../Styles/PagesStyle/Shop.css'
+import { fetchProducts, searchProducts } from '../services/product.service';
+
 
 
 function Shop() {
@@ -12,31 +14,18 @@ function Shop() {
     getProducts();
 },[]);
 
-  const getProducts = async()=>{
-        try {
-            let result = await fetch('http://localhost:5300/products');
-            result = await result.json();
-            result.sort((a,b)=> b._id.localeCompare(a._id));
-            setProducts(result);
-        }catch (error){
-            console.error('Error fetching product:',error);
-        }   
+  const getProducts = async () => {
+    const result = await fetchProducts();
+    setProducts(result);
     }
 
     const searchHandle = async(event)=>{
       let key = event.target.value;
-      if (key){
-          try {
-              
-          let result = await fetch(`http://localhost:5300/search/${key}`);
-          result = await result.json()
-          if(result){
-              setProducts(result)
-          }
-          }catch (error){
-              console.error("Error searching products:",error);
-          }
-      }else {getProducts()}
+      if (key) {
+        const result = await searchProducts(key);
+        setProducts(result);
+
+      } else {getProducts()}
   }
 
 
@@ -50,7 +39,7 @@ function Shop() {
       {
         products.map((item)=>
           <ul key={item._id} className='one-card'>
-            <li><img src={`http://localhost:5300/${item.img}`} alt='Product Photo ' /></li>
+            <li><img src={`http://localhost:5800/${item.img}`} alt='Product Photo ' /></li>
             <li className='card-price'>{item.price}</li>
             <li className='card-name'>{item.name}</li>
             <li className='card-text'>{item.text}</li>

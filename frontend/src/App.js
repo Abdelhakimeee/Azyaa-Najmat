@@ -1,19 +1,19 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Navbar from './Components/Navbar/Navbar';
-import Footer from './Components/Footer/Footer';
+import Navbar from './Components/Navbar';
+import Footer from './Components/Footer';
 import Home from './pages/Home';
-import Shop from './Components/Body/Shop';
+import Shop from './pages/Shop';
 import Review from './pages/Review';
 import Adming from './pages/Adming';
-import AddProduct from './Components/Body/AddProduct';
+import AddProduct from './Components/AddProduct';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import PrivateRoute from './Components/Body/PrivateRoute';
-import Login from './Components/Body/Login';     
-import UpdateProduct from './Components/Body/UpdateProduct';
-import FormShopNew from './Components/Body/FormShopNew';
+import PrivateRoute from './Components/PrivateRoute';
+import Login from './Components/Login';     
+import UpdateProduct from './Components/UpdateProduct';
+import FormShopNew from './Components/FormShopNew';
 
 
 

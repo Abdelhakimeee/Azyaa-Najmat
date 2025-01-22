@@ -24,9 +24,6 @@ app.use('/api', uploadImgRoute);       //    NN_8  next to upload Imag using Mul
 
 app.use("/api/products", productRoute);
 app.use('/api/users', userRoutes);
-// you have to add   ,  authenticateToken to block the access just the x have token have acccess
-// router.post('/', authenticateToken,  addProduct)
-
 //...
 
 
